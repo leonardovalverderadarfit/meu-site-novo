@@ -56,6 +56,7 @@ const IntroPage = () => {
             style={{ zIndex: 5 }}
           >
             <Particles
+              className={styles.tsparticles}
               height="250px"
               width="300px"
               params={{
@@ -170,6 +171,11 @@ const IntroPage = () => {
                     </svg>
                     <div className={styles.text}>GitHub</div>
                   </a>
+                </div>
+                <div className={styles.mobileMenu}>
+                  <a href="">Entrar no Site</a>
+                  <a href="">LinkedIn</a>
+                  <a href="">Github</a>
                 </div>
               </p>
             </div>

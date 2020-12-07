@@ -1856,3 +1856,19 @@ Video
   flex-direction: row;
   justify-content: center;
 }
+
+.mobileMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+  .tsparticles {
+    margin-top: 100px;
+  }
+  .svgWrapper {
+    display: none;
+  }
+  .mobileMenu {
+    display: flex;
+  }
+}
