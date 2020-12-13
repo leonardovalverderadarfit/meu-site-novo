@@ -14,11 +14,11 @@ const IntroPage = () => {
   React.useLayoutEffect(() => {
     Jquery(function ($) {
       //this is used for the video effect only
-      if ($(".IntroPage_cdBgVideoWrapper__1yLe5").length > 0) {
-        var videoWrapper = $(".IntroPage_cdBgVideoWrapper__1yLe5"),
+      if ($(".IntroPage_cdBgVideoWrapper__1G_Ju").length > 0) {
+        var videoWrapper = $(".IntroPage_cdBgVideoWrapper__1G_Ju"),
           mq = window
             .getComputedStyle(
-              document.querySelector(".IntroPage_cdBgVideoWrapper__1yLe5"),
+              document.querySelector(".IntroPage_cdBgVideoWrapper__1G_Ju"),
               "::after"
             )
             .getPropertyValue("content")
@@ -149,7 +149,10 @@ const IntroPage = () => {
                   </a>
                 </div>
                 <div className={styles.svgWrapper}>
-                  <a href="">
+                  <a
+                    href="https://www.linkedin.com/in/leonardo-valverde-509274ab/"
+                    target="_blank"
+                  >
                     <svg
                       height="60"
                       width="320"
@@ -161,7 +164,10 @@ const IntroPage = () => {
                   </a>
                 </div>
                 <div className={styles.svgWrapper}>
-                  <a href="">
+                  <a
+                    href="https://github.com/leonardovalverderadarfit"
+                    target="_blank"
+                  >
                     <svg
                       height="60"
                       width="320"
@@ -173,8 +179,14 @@ const IntroPage = () => {
                   </a>
                 </div>
                 <div className={styles.mobileMenu}>
+                  <span>Knownledge is Power</span>
                   <a href="">Entrar no Site</a>
-                  <a href="">LinkedIn</a>
+                  <a
+                    href="https://www.linkedin.com/in/leonardo-valverde-509274ab/"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
                   <a href="">Github</a>
                 </div>
               </p>

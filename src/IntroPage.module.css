@@ -1870,5 +1870,15 @@ Video
   }
   .mobileMenu {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileMenu a {
+    margin: 5px 0;
+    padding: 5px;
+    border: 2px solid #fff;
+    width: 160px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
   }
 }
