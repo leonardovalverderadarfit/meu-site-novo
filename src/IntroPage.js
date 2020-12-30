@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./IntroPage.module.css";
-import Particles from "react-particles-js";
-import coffee from "./static/img/coffee.svg";
+import logo from "./static/img/logo.png";
 import xpq from "./static/img/video.mp4";
 import xpt from "./static/img/video.webm";
 import Jquery from "jquery";
@@ -14,17 +13,16 @@ const IntroPage = () => {
   React.useLayoutEffect(() => {
     Jquery(function ($) {
       //this is used for the video effect only
-      if ($(".IntroPage_cdBgVideoWrapper__1G_Ju").length > 0) {
-        var videoWrapper = $(".IntroPage_cdBgVideoWrapper__1G_Ju"),
+      if ($(".IntroPage_cdBgVideoWrapper__2BXEx").length > 0) {
+        var videoWrapper = $(".IntroPage_cdBgVideoWrapper__2BXEx"),
           mq = window
             .getComputedStyle(
-              document.querySelector(".IntroPage_cdBgVideoWrapper__1G_Ju"),
+              document.querySelector(".IntroPage_cdBgVideoWrapper__2BXEx"),
               "::after"
             )
             .getPropertyValue("content")
             .replace(/"/g, "")
             .replace(/'/g, "");
-        console.log(videoWrapper);
         if (mq === "desktop") {
           // we are not on a mobile device
           var video = $(
@@ -55,89 +53,13 @@ const IntroPage = () => {
             className={`${styles.cdIntroContent} ${styles.mask}`}
             style={{ zIndex: 5 }}
           >
-            <Particles
-              className={styles.tsparticles}
-              height="250px"
-              width="300px"
-              params={{
-                fps_limit: 28,
-                particles: {
-                  collisions: {
-                    enable: false,
-                  },
-                  size: {
-                    value: 1.5,
-                  },
-                  number: {
-                    value: 160,
-                    density: {
-                      enable: false,
-                    },
-                  },
-                  line_linked: {
-                    enable: false,
-                    distance: 15,
-                    opacity: 0.7,
-                    color: "#fff",
-                  },
-                  move: {
-                    speed: 0.5,
-                    bounce: false,
-                  },
-                  opacity: {
-                    anim: {
-                      enable: true,
-                      opacity_min: 0.5,
-                      speed: 1,
-                      sync: false,
-                    },
-                    value: 0.4,
-                  },
-                },
-                polygon: {
-                  enable: true,
-                  scale: 0.8,
-                  color: "red",
-                  type: "inline",
-                  move: {
-                    radius: 10,
-                  },
-                  url: coffee,
-                  inline: {
-                    arrangement: "equidistant",
-                  },
-                  draw: {
-                    enable: true,
-                    stroke: {
-                      color: "#fff",
-                    },
-                  },
-                },
-                retina_detect: false,
-                interactivity: {
-                  events: {
-                    onhover: {
-                      enable: true,
-                      mode: "bubble",
-                    },
-                  },
-                  modes: {
-                    bubble: {
-                      size: 4,
-                      distance: 30,
-                      color: "#dddddd",
-                    },
-                  },
-                },
-              }}
-            />
-            <h1 data-content="Leonardo Valverde">
-              <span>Leonardo Valverde</span>
+            <h1 data-content="">
+              <img src={logo} alt="" style={{ width: "400px" }} />
             </h1>
             <div className={styles.actionWrapper}>
               <p>
                 <div className={styles.svgWrapper}>
-                  <a href="">
+                  <a href="/site">
                     <svg
                       height="60"
                       width="320"
@@ -152,6 +74,7 @@ const IntroPage = () => {
                   <a
                     href="https://www.linkedin.com/in/leonardo-valverde-509274ab/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <svg
                       height="60"
@@ -167,6 +90,7 @@ const IntroPage = () => {
                   <a
                     href="https://github.com/leonardovalverderadarfit"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <svg
                       height="60"
@@ -179,17 +103,27 @@ const IntroPage = () => {
                   </a>
                 </div>
                 <div className={styles.mobileMenu}>
-                  <span>Knownledge is Power</span>
-                  <a href="">Entrar no Site</a>
+                  <a href="/site">Entrar no Site</a>
                   <a
                     href="https://www.linkedin.com/in/leonardo-valverde-509274ab/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     LinkedIn
                   </a>
-                  <a href="">Github</a>
+                  <a
+                    href="https://github.com/leonardovalverderadarfit"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Github
+                  </a>
                 </div>
               </p>
+            </div>
+            <div className={styles.blockquote}>
+              <blockquote>"KNOWLEDGE IS POWER"</blockquote>
+              <span>Sir Francis Bacon</span>
             </div>
           </div>
 
