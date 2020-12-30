@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../../static/img/logo.png";
+import logoscroll from "../../static/img/logoscroll.png";
 import { ReactComponent as Arrow } from "../../static/img/arrow.svg";
 
 const Container = styled.div`
@@ -43,6 +44,12 @@ const Logo = styled.img`
   display: block;
 `;
 
+const LogoScroll = styled.img`
+  width: 100px;
+  max-width: 300px;
+  display: block;
+`;
+
 const NavBar = styled.nav`
   display: flex;
 `;
@@ -52,6 +59,15 @@ const Options = styled.ul`
   display: flex;
   width: 800px;
   height: 167px;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const OptionsScroll = styled.ul`
+  list-style: none;
+  display: flex;
+  width: 800px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
 `;
@@ -67,6 +83,52 @@ const TheLink = styled.a`
   text-decoration: none;
   border: 2px solid transparent;
   padding: 15px;
+  position: relative;
+  vertical-align: middle;
+  transition: color 0.5s ease;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+  }
+  &:hover {
+    color: #fff;
+  }
+  &::before {
+    border-top: 2px solid #dc0000;
+    border-bottom: 2px solid #dc0000;
+    transform: scale3d(0, 1, 1); // Shrink only width
+  }
+  &::after {
+    border-left: 2px solid #dc0000;
+    border-right: 2px solid #dc0000;
+    transform: scale3d(1, 0, 1); // Shrink only height
+  }
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1, 1, 1); // Show full-size
+    transition: transform 0.5s;
+  }
+`;
+
+const TheLinkScroll = styled.a`
+  font-size: 18px;
+  color: #dc0000;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px;
   position: relative;
   vertical-align: middle;
   transition: color 0.5s ease;
@@ -217,6 +279,22 @@ const ArrowContainer = styled.div`
   }
 `;
 
+const ScrollMenuContent = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  background: #eee;
+  width: 100%;
+`;
+
+const ScrollMenu = styled.div`
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+`;
+
 function handleMove(event) {
   const windowWidth = window.innerWidth / 5;
   const windowHeight = window.innerHeight / 5;
@@ -234,6 +312,31 @@ function handleArrowClick() {
 const Home = () => {
   return (
     <>
+      <ScrollMenuContent>
+        <ScrollMenu>
+          <div>
+            <LogoScroll src={logoscroll} />
+          </div>
+          <div>
+            <NavBar>
+              <OptionsScroll>
+                <Menu>
+                  <TheLinkScroll href="#">Início</TheLinkScroll>
+                </Menu>
+                <Menu>
+                  <TheLinkScroll href="#">Sobre</TheLinkScroll>
+                </Menu>
+                <Menu>
+                  <TheLinkScroll href="#">Portfólio</TheLinkScroll>
+                </Menu>
+                <Menu>
+                  <TheLinkScroll href="#">Contato</TheLinkScroll>
+                </Menu>
+              </OptionsScroll>
+            </NavBar>
+          </div>
+        </ScrollMenu>
+      </ScrollMenuContent>
       <Container onMouseMove={handleMove}>
         <TheContent>
           <ContentContainer>
@@ -325,6 +428,25 @@ const Home = () => {
       <p>teste</p>
       <p>teste</p>
       <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p> <p>teste</p>
       <p>teste</p>
       <p>teste</p>
       <p>teste</p>

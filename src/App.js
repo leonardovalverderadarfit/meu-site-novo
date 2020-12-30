@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/home/Home";
+import Home from "./Components/home/Home";
 import IntroPage from "./IntroPage";
 import { createGlobalStyle } from "styled-components";
 

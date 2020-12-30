@@ -13,13 +13,10 @@ const IntroPage = () => {
   React.useLayoutEffect(() => {
     Jquery(function ($) {
       //this is used for the video effect only
-      if ($(".IntroPage_cdBgVideoWrapper__2BXEx").length > 0) {
-        var videoWrapper = $(".IntroPage_cdBgVideoWrapper__2BXEx"),
+      if ($(".thevideo").length > 0) {
+        var videoWrapper = $(".thevideo"),
           mq = window
-            .getComputedStyle(
-              document.querySelector(".IntroPage_cdBgVideoWrapper__2BXEx"),
-              "::after"
-            )
+            .getComputedStyle(document.querySelector(".thevideo"), "::after")
             .getPropertyValue("content")
             .replace(/"/g, "")
             .replace(/'/g, "");
@@ -38,7 +35,7 @@ const IntroPage = () => {
       setLoad(true);
       return setEffect(
         <div
-          className={styles.cdBgVideoWrapper}
+          className={`${styles.cdBgVideoWrapper} thevideo`}
           data-video="./static/img/video"
         ></div>
       );
